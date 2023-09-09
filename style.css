@@ -1,0 +1,63 @@
+.body{
+    
+}
+
+.head{
+    text-align: center;
+}
+
+.big{
+   position:relative;
+   left:27%;
+   border:1px solid black;
+   width: 500px;
+   height:400px;
+
+}
+.score{
+    text-align: right;
+    font-size: 20px;
+    padding:10px;
+    margin-right: 20px;;
+}
+
+.question{
+    width:500px;
+    margin:auto;
+    padding:20px;
+
+}
+
+.form{
+    position:absolute;
+    left:20%;
+    bottom:46%;
+}
+.bullet{
+    display:block;
+}
+.button{
+    display: block;
+position: relative;
+    top:120px;
+    left:40px;
+}
+
+.submit{
+    display:block;
+    position:relative;
+    left:32%;
+    width:120px;
+    padding:6px;
+    background-color: black;
+    border-radius: 10px;
+    color:white;
+}
+
+.next{
+    padding:5px;
+    background-color: black;
+    color:white;
+
+}
+

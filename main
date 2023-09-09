@@ -1,0 +1,45 @@
+var score = document.querySelector('.score');
+var question = document.querySelector('.question');
+var submit = document.querySelector('.submit');
+var next = document.querySelector('.next');
+var radioButtons = document.querySelectorAll('input[type="radio"]');
+var radioLabels = document.querySelectorAll('.bullet');
+
+var correctAns = "";
+
+var questions = [
+    {
+        question: "Who invented the tin can for preserving food in 1810?",
+        options: ["Peter Durand", "John Paul", "Philip Peter", "Donald Bull"],
+        correct: "Peter Durand"
+    },
+    {
+        question: "What did Al Capone’s business card state his occupation was?",
+        options: ["Peter Durand", "A used welder", "A used furniture salesman", "Donald Bull"],
+        correct: "A used welder"
+    },
+    {
+        question: "What is the world’s smallest bird?",
+        options: ["Flamingo", "Eagle", "Chicken", "Bee Hummingbird"],
+        correct: "Bee Hummingbird"
+    }
+];
+
+next.addEventListener("click", function () {
+    let random = Math.floor(Math.random() * questions.length);
+    let currentQuestion = questions[random];
+
+    question.innerText = currentQuestion.question;
+    
+    // Update the radio button labels with options
+    radioLabels.forEach(function (label, index) {
+        label.innerText = currentQuestion.options[index];
+    });
+
+    correctAns = currentQuestion.correct;
+    
+    // Uncheck all radio buttons
+    radioButtons.forEach(function (radio) {
+        radio.checked = false;
+    });
+});
